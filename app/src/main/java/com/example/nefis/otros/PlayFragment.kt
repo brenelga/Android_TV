@@ -1,27 +1,42 @@
 package com.example.nefis.otros
 
+import android.net.Uri
 import android.os.Bundle
-import android.view.View
-import androidx.leanback.app.DetailsSupportFragment
-import androidx.leanback.widget.ArrayObjectAdapter
-import androidx.leanback.widget.DetailsOverviewRow
-import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter
+import androidx.leanback.app.VideoSupportFragment
+import androidx.leanback.app.VideoSupportFragmentGlueHost
+import androidx.leanback.media.MediaPlayerAdapter
+import androidx.leanback.media.PlaybackTransportControlGlue
+import androidx.leanback.widget.PlaybackControlsRow
 import com.example.nefis.PlayActivity
-import com.example.nefis.Video
+import com.example.nefis.modelo.Video
 
-class PlayFragment: DetailsSupportFragment() {
+class PlayFragment : VideoSupportFragment() {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private lateinit var transportControlGlue: PlaybackTransportControlGlue<MediaPlayerAdapter>
 
-        val video=requireActivity().intent.getParcelableExtra<Video>(PlayActivity.MOVIE_EXTRA)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-        val info=FullWidthDetailsOverviewRowPresenter(VideoDescription())
+        val video = requireActivity().intent.getParcelableExtra<Video>(PlayActivity.MOVIE_EXTRA) ?: return
 
-        val videos=ArrayObjectAdapter(info)
-        videos.add(DetailsOverviewRow(video))
+        val glueHost = VideoSupportFragmentGlueHost(this)
+        val playerAdapter = MediaPlayerAdapter(requireContext())
+        playerAdapter.setRepeatAction(PlaybackControlsRow.RepeatAction.INDEX_NONE)
 
-        adapter=videos
+        transportControlGlue = PlaybackTransportControlGlue(requireContext(), playerAdapter)
+        transportControlGlue.host = glueHost
+
+        transportControlGlue.title = video.title
+        transportControlGlue.subtitle = video.description
+
+        transportControlGlue.playWhenPrepared()
+
+        val videoUri = "android.resource://${requireContext().packageName}/${video.videoUrl}"
+        playerAdapter.setDataSource(Uri.parse(videoUri))
     }
 
+    override fun onPause() {
+        super.onPause()
+        transportControlGlue.pause()
+    }
 }

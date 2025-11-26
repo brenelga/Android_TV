@@ -1,7 +1,6 @@
 package com.example.nefis.otros
 
 import androidx.leanback.widget.AbstractDetailsDescriptionPresenter
-import com.example.nefis.Video
 
 class VideoDescription: AbstractDetailsDescriptionPresenter() {
     override fun onBindDescription(vh: ViewHolder, item: Any?) {

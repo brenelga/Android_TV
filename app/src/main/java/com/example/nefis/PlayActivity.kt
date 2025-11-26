@@ -2,40 +2,30 @@ package com.example.nefis
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
-import android.net.Uri
-import android.util.Log
-import android.widget.MediaController
-import android.widget.VideoView
+import com.example.nefis.modelo.Video
+import com.example.nefis.otros.PlayFragment
 
 class PlayActivity : FragmentActivity() {
 
-    companion object{
-        const val MOVIE_EXTRA="extra:movie"
+    companion object {
+        const val MOVIE_EXTRA = "movie"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_play)
 
-        val videoView = findViewById<VideoView>(R.id.videoView)
+        if (savedInstanceState == null) {
+            val video = intent?.getParcelableExtra<Video>(MOVIE_EXTRA)
 
-        val video: Video? =intent.getParcelableExtra<Video>(PlayActivity.MOVIE_EXTRA)
+            val fragment = PlayFragment().apply {
+                arguments = Bundle().apply {
+                    putParcelable(MOVIE_EXTRA, video)
+                }
+            }
 
-        var path=""
-        if (video != null) {
-            path = "android.resource://" + packageName + "/" + video.video
+            supportFragmentManager.beginTransaction()
+                .replace(android.R.id.content, fragment)
+                .commit()
         }
-
-        val uri = Uri.parse(path)
-
-
-        val mediaController = MediaController(this)
-        mediaController.setAnchorView(videoView)
-        videoView.setMediaController(mediaController)
-
-        videoView.setVideoURI(uri)
-        videoView.requestFocus()
-        videoView.start()
-
     }
 }
