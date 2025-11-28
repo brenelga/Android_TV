@@ -5,6 +5,7 @@ import androidx.leanback.widget.ImageCardView
 import androidx.leanback.widget.Presenter
 import com.example.nefis.modelo.Video
 
+
 class Card: Presenter(){
     override fun onCreateViewHolder(parent: ViewGroup): ViewHolder {
         val card=ImageCardView(parent.context)

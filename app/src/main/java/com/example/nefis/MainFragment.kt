@@ -49,16 +49,16 @@ class MainFragment: BrowseSupportFragment() {
 
     private fun getCategories(): List<Categoria> {
         return listOf(
-            Categoria("Comedia", listOf(
-                Video("Video 1.1", "Comedia", R.mipmap.ic_launcher, "Descripción del video de comedia 1", R.raw.video_file_1_1),
-                Video("Video 1.2", "Comedia", R.mipmap.ic_launcher, "Descripción del video de comedia 2", R.raw.video_file_1_2),
-                Video("Video 1.3", "Comedia", R.mipmap.ic_launcher, "Descripción del video de comedia 3", R.raw.video_file_1_3),
-                Video("Video 1.4", "Comedia", R.mipmap.ic_launcher, "Descripción del video de comedia 4", R.raw.video_file_1_4),
-                Video("Video 1.5", "Comedia", R.mipmap.ic_launcher, "Descripción del video de comedia 5", R.raw.video_file_1_5)
+            Categoria("Leyendas", listOf(
+                Video("La leyenda del poeta", "Leyendas", R.mipmap.Ley1, "La historia de un poeta que aun muerto sigue cantando por su amada", R.raw.Ley1),
+                Video("El espejo del diablo", "Leyendas", R.mipmap.Ley2, "El espejo que te muestra tu rostro en su último momento", R.raw.Ley2),
+                Video("El Quinto Sol", "Leyendas", R.mipmap.Ley3, "La historia del surgimiento del quinto sol", R.raw.Ley3),
+                Video("Vampiros mexicanos", "Leyendas", R.mipmap.Ley4, "No todos los vampiros están en Europa, también en nuestro país hay", R.raw.Ley4),
+                Video("Brujas", "Leyendas", R.mipmap.Ley5, "Las brujas más siniestras de nuestro país", R.raw.Ley5)
             )),
-            Categoria("Acción", listOf(
-                Video("Video 2.1", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 1", R.raw.video_file_2_1),
-                Video("Video 2.2", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 2", R.raw.video_file_2_2),
+            Categoria("Musica", listOf(
+                Video("Hated By Life Itself", "Musica", R.mipmap.Mus1, "Cover en Español, Compositor: Kanzaki Iori, Artista: Hatsune Miku", R.raw.Mus1),
+                Video("Last's One Wipping", "Musica", R.mipmap.Mus2, "Compositor: Neru, Interprete: Hachi ft Itsuki Natsume", R.raw.Mus2),
                 Video("Video 2.3", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 3", R.raw.video_file_2_3),
                 Video("Video 2.4", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 4", R.raw.video_file_2_4),
                 Video("Video 2.5", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 5", R.raw.video_file_2_5)
