@@ -59,8 +59,8 @@ class MainFragment: BrowseSupportFragment() {
             Categoria("Musica", listOf(
                 Video("Hated By Life Itself", "Musica", R.mipmap.Mus1, "Cover en Español, Compositor: Kanzaki Iori, Artista: Hatsune Miku", R.raw.Mus1),
                 Video("Last's One Wipping", "Musica", R.mipmap.Mus2, "Compositor: Neru, Interprete: Hachi ft Itsuki Natsume", R.raw.Mus2),
-                Video("Video 2.3", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 3", R.raw.video_file_2_3),
-                Video("Video 2.4", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 4", R.raw.video_file_2_4),
+                Video("The Everlasting Guilty Crown", "Musica", R.mipmap.Mus3, "Compositor: Ryo, Interprete: Vesperbell Yomi", R.raw.Mus3),
+                Video("Slow Downer", "Musica", R.mipmap.Mus4, "Compositor: GUMI, Interprete: Veserbell Yomi ft KMNZ Liz", R.raw.Mus4),
                 Video("Video 2.5", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 5", R.raw.video_file_2_5)
             )),
             Categoria("Drama", listOf(
