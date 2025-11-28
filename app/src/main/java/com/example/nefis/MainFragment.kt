@@ -61,28 +61,28 @@ class MainFragment: BrowseSupportFragment() {
                 Video("Last's One Wipping", "Musica", R.mipmap.Mus2, "Compositor: Neru, Interprete: Hachi ft Itsuki Natsume", R.raw.Mus2),
                 Video("The Everlasting Guilty Crown", "Musica", R.mipmap.Mus3, "Compositor: Ryo, Interprete: Vesperbell Yomi", R.raw.Mus3),
                 Video("Slow Downer", "Musica", R.mipmap.Mus4, "Compositor: GUMI, Interprete: Veserbell Yomi ft KMNZ Liz", R.raw.Mus4),
-                Video("Video 2.5", "Acción", R.mipmap.ic_launcher, "Descripción del video de acción 5", R.raw.video_file_2_5)
+                Video("Marshall Maximizer", "Musica", R.mipmap.Mus5, "Compositor: Hiiragi Magnetite, Interprete: Aitsuki Nakuru", R.raw.Mus5)
             )),
-            Categoria("Drama", listOf(
-                Video("Video 3.1", "Drama", R.mipmap.ic_launcher, "Descripción del video de drama 1", R.raw.video_file_3_1),
-                Video("Video 3.2", "Drama", R.mipmap.ic_launcher, "Descripción del video de drama 2", R.raw.video_file_3_2),
-                Video("Video 3.3", "Drama", R.mipmap.ic_launcher, "Descripción del video de drama 3", R.raw.video_file_3_3),
-                Video("Video 3.4", "Drama", R.mipmap.ic_launcher, "Descripción del video de drama 4", R.raw.video_file_3_4),
-                Video("Video 3.5", "Drama", R.mipmap.ic_launcher, "Descripción del video de drama 5", R.raw.video_file_3_5)
+            Categoria("Avances", listOf(
+                Video("86: Eighty-Six", "Avances", R.mipmap.Ava1, "Estreno: Abril 10 de 2021, Stream en Crunchyroll", R.raw.Ava1),
+                Video("86: Eighty-Six Cour 2", "Avances", R.mipmap.Ava1, "Estreno: Octubre 2 de 2021, Stream en Crunchyroll", R.raw.Ava2),
+                Video("Frieren: Beyond's the Journey End", "Avances", R.mipmap.Ava3, "Estreno: Septiembre 29 de 2023, Stream en Crunchyroll", R.raw.Ava3),
+                Video("An Archdemon’s Dilemma", "Avances", R.mipmap.Ava4, "Estreno: Enero 2024, Stream en Crunchyroll", R.raw.Ava4),
+                Video("Zenshu", "Avances", R.mipmap.Ava5, "Estreno: Enero 5 de 2025, Stream en Crunchyroll", R.raw.Ava5)
             )),
-            Categoria("Ciencia Ficción", listOf(
-                Video("Video 4.1", "Sci-Fi", R.mipmap.ic_launcher, "Descripción del video de sci-fi 1", R.raw.video_file_4_1),
-                Video("Video 4.2", "Sci-Fi", R.mipmap.ic_launcher, "Descripción del video de sci-fi 2", R.raw.video_file_4_2),
-                Video("Video 4.3", "Sci-Fi", R.mipmap.ic_launcher, "Descripción del video de sci-fi 3", R.raw.video_file_4_3),
-                Video("Video 4.4", "Sci-Fi", R.mipmap.ic_launcher, "Descripción del video de sci-fi 4", R.raw.video_file_4_4),
-                Video("Video 4.5", "Sci-Fi", R.mipmap.ic_launcher, "Descripción del video de sci-fi 5", R.raw.video_file_4_5)
+            Categoria("Datos", listOf(
+                Video("Los 5 paises más ricos de Hispanoamérica", "Datos", R.mipmap.Dat1, "Conoce los 5 países con mayor PIB", R.raw.Dat1),
+                Video("Los 5 países con más hispanohablantes", "Datos", R.mipmap.Dat2, "Conoce los 5 países donde mas se habla español", R.raw.Dat2),
+                Video("La novela que predijo el hundimiento del titanic", "Datos", R.mipmap.Dat3, "Conoce la novela que predijo el hundimiento del titanic", R.raw.Dat3),
+                Video("Los 5 países con más turistas", "Datos", R.mipmap.Dat4, "Conoce los 5 países más visitados", R.raw.Dat4),
+                Video("Gran Bretaña no es un país", "Datos", R.mipmap.Dat5, "Conoce la diferencia entre Inglaterra, Gran Bretaña y Reino Unido", R.raw.Dat5)
             )),
-            Categoria("Documentales", listOf(
-                Video("Video 5.1", "Documental", R.mipmap.ic_launcher, "Descripción del documental 1", R.raw.video_file_5_1),
-                Video("Video 5.2", "Documental", R.mipmap.ic_launcher, "Descripción del documental 2", R.raw.video_file_5_2),
-                Video("Video 5.3", "Documental", R.mipmap.ic_launcher, "Descripción del documental 3", R.raw.video_file_5_3),
-                Video("Video 5.4", "Documental", R.mipmap.ic_launcher, "Descripción del documental 4", R.raw.video_file_5_4),
-                Video("Video 5.5", "Documental", R.mipmap.ic_launcher, "Descripción del documental 5", R.raw.video_file_5_5)
+            Categoria("Musica2", listOf(
+                Video("Ragnarok in Remembrance", "Musica2", R.mipmap.Mus6, "Aitsuki Nakuru, Hifumi Inc. 2023", R.raw.Mus6),
+                Video("Stellar Stellar", "Musica2", R.mipmap.Mus7, "Hoshimachi Suisei, Taku Inoue. 2021", R.raw.Mus7),
+                Video("Kireigoto", "Musica2", R.mipmap.Mus8, "Hoshimachi Suisei, Taku Inoue. 2025", R.raw.Mus8),
+                Video("Issei", "Musica2", R.mipmap.Mus9, "Vesperbell, Veena. 2025", R.raw.Mus9),
+                Video("Emergence", "Musica2", R.mipmap.Mus10, "Vesperbell, Veena. 2024", R.raw.Mus10)
             ))
         )
     }
